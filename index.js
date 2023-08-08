@@ -13,7 +13,7 @@ let apellidoIngresado = prompt("Ingresar apellido")
 
 if((nombreIngresado !="") && (apellidoIngresado !="")){
     alert("nombre: "+nombreIngresado +"\napellido:"+apellidoIngresado);
-    alert("Bienvenide a nuestra pagina web,"+nombreIngresado)
+    alert("Bienvenide a nuestra pagina web,"+" "+nombreIngresado)
 } else{
     alert("error: ingresar nombre y apellido")
 }
@@ -22,13 +22,28 @@ console.log(nombreIngresado +" "+ apellidoIngresado)
 
 let edadIngresada = prompt("es usted mayor de edad? ingrese su edad por favor")
 
+
 if(edadIngresada !=""){
     alert("Edad: "+edadIngresada);
 } else{
     alert("que haces bobo? pone tu edad")
 }
+//identificador de edad
+if(edadIngresada > 18) {
+    alert("Usted es mayor de edad, puede pasar") 
+     console.log("Tiene autorizacion de usar esta pagina web")
+   
+} else if ( edadIngresada < 18 ) {
+    alert("Usted es menor de edad, no puede pasar.")
+     console.log("No tiene auntorizacion de usar esta pagina web")
+} else if (Boolean(edadIngresada) === false ) {
+    alert("Ingrese una edad valida")
+}
+
+
 
 console.log(edadIngresada)
+
 
 //if ( usuario === PreguntarUsuario && contrasenia === PreguntarContraseña ){
 //    alert ("Bienvenido!")
@@ -43,6 +58,7 @@ const numeroImpar = 97
 
 console.log("numeroImpar + numeroPar")
 
+// ignorar lo de abajo
 //let numeroCinco = 5;
 
 //function multiplicarPorCinco(numero) {
@@ -58,6 +74,7 @@ console.log("numeroImpar + numeroPar")
     //}
 //}
 
+// bucle
 const numeroCincoo = 5
 
 console.log(numeroCincoo * 99 )
@@ -71,3 +88,40 @@ for ( let a = 0; a < 10; a = a + 1 ){
 //for ( let i = 20; i < 50; i = i + 1 ){
 
 //}
+
+//probando array
+
+const ListaRandom = [1, 2, 3, 4]
+
+console.log(ListaRandom)
+
+const listaRindim = new Array(1, 2, 3, 4) 
+
+console.log(listaRindim)
+
+// probando while
+var contador = 1;
+
+while (contador <= 5) {
+  console.log("Número: " + contador);
+  contador++;}
+
+  // probando objeto
+
+  const Persona = {
+    nombre:"Messi" 
+  }
+  //tipo object
+console.log(typeof Persona)
+console.log(Persona.nombre)
+
+// arrays
+
+const MeGustasTu = ["los aviones", "viajar", "la mañana", "el viento", "soñar", "la mar"]
+
+console.log(MeGustasTu)
+
+//onsole.log(MeGustasTu.join("me gusta"))
+
+//intente hacer el "me gustan los aviones, me gustas tu" pero no se que paso
+console.log(MeGustasTu.join("me gusta "+MeGustasTu+", me gustas tu"))

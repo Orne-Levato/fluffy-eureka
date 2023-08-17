@@ -2,6 +2,18 @@ const validacion01 = document.querySelector("#validacion1")
 
 console.log(validacion01)
 
+const validacion02 = document.querySelector("#validacion2")
+
+console.log(validacion02)
+
+const validacion03 = document.querySelector("#validacion3")
+
+console.log(validacion03)
+
+validacion03.onchange = (e) => {
+    console.log(e.target.value)
+}
+
 console.log ("probando 123")
 
 //const usuario = "Mi nombre"
@@ -137,6 +149,6 @@ for (let i = 0; i < MeGustasTu.length; i++) {
 
  
 
-validationDefault01.addEventListener("click", () => {
+validationDefault01.addEventListener("click", (event) => {
     console.log("me hacen click")
 })

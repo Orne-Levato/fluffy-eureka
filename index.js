@@ -14,6 +14,27 @@ validacion03.onchange = (e) => {
     console.log(e.target.value)
 }
 
+// vamos a hacer una lista de clientes con lo que se ingrese al formulario
+let clientes = []
+
+//para que no se actualice la pag al enviar formulario
+document.querySelector("form").onsubmit = ( event ) => {
+    event.preventDefault()
+
+    console.log("formulario enviado")
+
+    clientes.push({
+        nombre: validacion01.value,
+        apellido: validacion02.value
+    })
+
+    console.log(clientes)
+}
+
+
+
+console.log(clientes)
+
 console.log ("probando 123")
 
 //const usuario = "Mi nombre"
@@ -149,6 +170,7 @@ for (let i = 0; i < MeGustasTu.length; i++) {
 
  
 
-validationDefault01.addEventListener("click", (event) => {
+validacion03.addEventListener("click", (event) => {
     console.log("me hacen click")
 })
+

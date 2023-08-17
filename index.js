@@ -1,3 +1,7 @@
+const validacion01 = document.querySelector("#validacion1")
+
+console.log(validacion01)
+
 console.log ("probando 123")
 
 //const usuario = "Mi nombre"
@@ -36,13 +40,16 @@ if(edadIngresada > 18) {
 } else if ( edadIngresada < 18 ) {
     alert("Usted es menor de edad, no puede pasar.")
      console.log("No tiene auntorizacion de usar esta pagina web")
+
+     location.href = ".denegado/html"
+
 } else if (Boolean(edadIngresada) === false ) {
     alert("Ingrese una edad valida")
 }
 
-
-
 console.log(edadIngresada)
+
+
 
 
 //if ( usuario === PreguntarUsuario && contrasenia === PreguntarContraseña ){
@@ -123,5 +130,13 @@ console.log(MeGustasTu)
 
 //onsole.log(MeGustasTu.join("me gusta"))
 
-//intente hacer el "me gustan los aviones, me gustas tu" pero no se que paso
-console.log(MeGustasTu.join("me gusta "+MeGustasTu+", me gustas tu"))
+for (let i = 0; i < MeGustasTu.length; i++) {
+    console.log("Me gusta " + MeGustasTu[i] + ", me gustas tú.");
+  }
+
+
+ 
+
+validationDefault01.addEventListener("click", () => {
+    console.log("me hacen click")
+})
